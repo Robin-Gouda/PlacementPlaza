@@ -37,7 +37,7 @@ function App() {
               setMessage(null);
               setPositiveMessage(null);
               const { confirmPassword, ...newData } = data;
-              const url = "http://localhost:3001/auth/signup";
+              const url = `${process.env.REACT_APP_BACKEND_URL}/auth/signup`;
               const response = await fetch(url, {
                 method: "POST",
                 body: JSON.stringify(newData),
